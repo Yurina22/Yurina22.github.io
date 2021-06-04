@@ -1,0 +1,25 @@
+@import "utils/var";
+
+@mixin font-face($font-name, $file-name) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name + '.eot');
+    src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+    url($file-name + '.woff') format('woff'),
+    url($file-name + '.ttf')  format('truetype');
+  }
+}
+
+@include font-face('OpenSans-Regular', '../fonts/OpenSans-Regular');
+@include font-face('OpenSans-Bold', '../fonts/OpenSans-Bold');
+@include font-face('OpenSans-SemiBold', '../fonts/OpenSans-SemiBold');
+@include font-face('Montserrat-Regular', '../fonts/Montserrat-Regular');
+@include font-face('Montserrat-Light', '../fonts/Montserrat-Light');
+@include font-face('Montserrat-SemiBold', '../fonts/Montserrat-SemiBold');
+
+$open_sans: 'OpenSans-Regular', sans-serif;
+$open_sans_bold: 'OpenSans-Bold', sans-serif;
+$open_sans_semibold: 'OpenSans-SemiBold', sans-serif;
+$montserrat: 'Montserrat-Regular', sans-serif;
+$montserrat_semibold: 'Montserrat-SemiBold', sans-serif;
+$montserrat_light: 'Montserrat-Light', sans-serif;
